@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <h1>Administer CSV's</h1>
+  <p class="lead">CSV Up allows you to save CSV data to persistent storage along with queryable meta data.</p>
+  <p><a class="btn btn-lg btn-success" href="/admin/save" role="button">Upload data</a></p>
+</div>
+
+<div class="row stats">
+  <div class="col-lg-6">
+    <h4>Amazon S3</h4>
+    <p>CSV Up is currently configured to store documents in S3 bucket <span>{{stats.storage.bucketId}}<span>.</p>
+
+    <h4>Mongo DB</h4>
+    <p>CSV Up is currently configured to store metadata in Mongo DB <span>{{stats.storage.mongoName}}</span>.</p>
+
+    <h4>API, 3rd party</h4>
+    <p>CSV Up API status: <span>{{stats.api.enabled}}</span>. Stathat status: <span>{{stats.stathat.enabled}}</span>.</p>
+  </div>
+
+  <div class="col-lg-6">
+    <h4>Total documents</h4>
+    <p>There is <span>{{stats.storage.total}}</span> total documents.</p>
+
+    <h4>Upload Usage</h4>
+    <!-- Embedd stathat graph -->
+  </div>
+</div>

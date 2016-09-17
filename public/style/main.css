@@ -1,0 +1,22 @@
+body {
+  padding: 16px 0;
+}
+
+.container {
+  max-width: 758px;
+}
+
+.header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+p span {
+  font-weight: bold;
+}
