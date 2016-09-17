@@ -24,21 +24,19 @@ app.set('view engine', 'handlebars');
 const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
-const api = require('lib/api');
-app.use('/api/v1', api);
+const api = require(__dirname + '/lib/api');
+if (process.env.ENABLE_API) {
+  app.use('/api/v1', api.router);
+}
 
 app.get('/', function (req, res) {
   const stats = {
-    storage: {
-      bucketId: "bucket id",
-      mongoName: "mongo name",
-      total: 100
-    },
+    storage: api.stats(),
     stathat: {
-      enabled: true ? 'enabled' : 'disabled'
+      enabled: process.env.PRODUCTION ? 'enabled' : 'disabled'
     },
     api: {
-      enabled: true ? 'enabled' : 'disabled'
+      enabled: process.env.ENABLE_API ? 'enabled' : 'disabled'
     }
   }
   res.render('index', {nav: {home_active: true}, stats: stats});
