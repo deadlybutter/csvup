@@ -1,0 +1,23 @@
+{
+  "name": "csvup",
+  "version": "1.0.0",
+  "description": "API + Interface for uploading CSV data &amp; searching for datasets",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deadlybutter/csvup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deadlybutter/csvup/issues"
+  },
+  "homepage": "https://github.com/deadlybutter/csvup#readme",
+  "dependencies": {
+    "aws-sdk": "^2.6.3",
+    "express": "^4.14.0"
+  }
+}
