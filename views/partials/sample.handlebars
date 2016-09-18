@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>{{dataSet.title}}</h3>
+    {{#if displayView}}
+      <p><a class="btn btn-lg btn-success" href="/admin/manage/dataset/{{dataSet._id}}" role="button">View</a></p>
+    {{/if}}
+  </div>
+  <div class="panel-body">
+    <p>{{dataSet.description}}</p>
+    <hr>
+    <p>Categories <span>{{dataSet.categories}}</span></p>
+    <p>Public URL: <span>{{dataSet.url}}</span></p>
+    <p>Data Source: <span>{{dataSet.dataSource}}</span></p>
+    <p>Upload Source: <span>{{dataSet.uploadSource}}</span></p>
+  </div>
+  <table class="table table-sample" data-rows={{rows}} data-url={{dataSet.url}}></table>
+</div>

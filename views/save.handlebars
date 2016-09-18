@@ -1,1 +1,24 @@
-save
+<h1>Upload a dataset</h1>
+<form action="/api/v1/upload" method="post" id="upload-form">
+  <div class="input-group">
+    <span class="input-group-addon" id="title">Title</span>
+    <input type="text" class="form-control" placeholder="Statistics of U.S. Businesses" aria-describedby="title">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="description">Description</span>
+    <input type="text" class="form-control" placeholder="Annual series that provides national and subnational data on the distribution of economic data by enterprise size and industry." aria-describedby="description">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="categories">Category</span>
+    <input type="text" class="form-control" placeholder="business,manufacturing" aria-describedby="categories">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="source">Source</span>
+    <input type="text" class="form-control" placeholder="http://www.census.gov/programs-surveys/susb.html" aria-describedby="source">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="data">Data</span>
+    <input type="file" class="form-control" accept=".csv" aria-describedby="data">
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>

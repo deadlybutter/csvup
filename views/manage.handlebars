@@ -1,1 +1,13 @@
-manage
+<div class="manage-controls">
+  <form class="form-inline">
+    <div class="form-group">
+      <input type="email" class="form-control" id="query">
+    </div>
+    <button type="submit" class="btn btn-default">Search</button>
+  </form>
+  <p><a class="btn btn-lg btn-success" href="/admin/save" role="button">Upload data</a></p>
+</div>
+
+{{#each dataSets}}
+  {{> sample dataSet=this rows=4 displayView=true}}
+{{/each}}

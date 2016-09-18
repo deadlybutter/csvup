@@ -20,3 +20,38 @@ body {
 p span {
   font-weight: bold;
 }
+
+form .input-group {
+  margin: 16px 0;
+}
+
+form .btn-success {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+td, th {
+    overflow: hidden;
+}
+
+.manage-controls p, form{
+  display: inline-block;
+}
+
+.manage-controls p a {
+  font-size: 14px;
+  padding: 6px 12px;
+}
+
+.panel-heading p, h3 {
+  display: inline-block;
+}
+
+.panel-heading h3 {
+  margin-top: 0;
+  padding-right: 8px;
+}
+
+.panel-heading p {
+  margin-bottom: 0;
+}

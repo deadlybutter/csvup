@@ -13,9 +13,9 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="{{#if nav.home_active}}active{{/if}}"><a href="/">Home</a></li>
-            <li role="presentation" class="{{#if nav.manage_active}}active{{/if}}"><a href="/admin">Manage</a></li>
-            <li role="presentation" class="{{#if nav.api_active}}active{{/if}}"><a href="/admin/api">API</a></li>
+            <li role="presentation" class="{{#if nav.home_active}}active{{/if}}"><a href="/admin">Home</a></li>
+            <li role="presentation" class="{{#if nav.manage_active}}active{{/if}}"><a href="/admin/manage">Manage</a></li>
+            <li role="presentation" class="{{#if nav.api_active}}active{{/if}}"><a href="/admin/manage/api">API</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">CSV Up</h3>
@@ -25,7 +25,17 @@
         <p>© 2016 CSV Up</p>
       </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+      var AUTHORIZATION = "{{key}}";
+    </script>
+    {{#if nav.save_active}}
+      <script src="/js/save.js"></script>
+    {{else if nav.manage_active}}
+      <script src="/js/papaparse.min.js"></script>
+      <!-- <script src="/js/papaparse.js"></script> -->
+      <script src="/js/sample.js"></script>
+    {{/if}}
   </body>
 </html>
